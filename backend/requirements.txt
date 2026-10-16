@@ -1,0 +1,22 @@
+# --- Web framework ---
+fastapi>=0.110,<1.0
+uvicorn[standard]>=0.29
+pydantic>=2.6
+python-multipart>=0.0.9
+python-dotenv>=1.0
+httpx>=0.27
+numpy>=1.26
+
+# --- Résumé text extraction ---
+pypdf>=4.0
+python-docx>=1.1
+
+# --- LLM providers (OpenAI-compatible) ---
+openai>=1.30
+
+# --- RAG: embeddings + vector store ---
+# These are optional at *runtime*: the app detects what's installed and falls
+# back to dependency-free implementations (see app/rag/embeddings.py and
+# app/rag/store.py), so the demo runs without downloading torch.
+sentence-transformers>=2.6
+chromadb>=0.5
